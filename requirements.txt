@@ -1,0 +1,5 @@
+torch
+python-docx
+transformers
+colorama
+scikit-learn
