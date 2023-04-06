@@ -10,3 +10,8 @@ This contains only the python MetRuBert module to use externally
 
 # The input
 MetRuBert.py will ask you for the location of a dev.tsv file, these are the input files our model uses, an example was added in this repo as well.
+
+# Virtual env
+it might be usefull to create a virtual environment <br>
+you do this by doing python3 -venv {name of virtual env} <br>
+you can then load the venv by doing source {name of virtual env}/bin/activate (do this from the folder the virtual env is in)
