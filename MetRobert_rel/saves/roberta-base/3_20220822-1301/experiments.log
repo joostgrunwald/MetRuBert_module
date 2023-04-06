@@ -1,0 +1,77 @@
+[56]2022-08-22 13:10:25,508: [epoch 1] ,lr: 3.689831910100857e-05 ,tr_loss: 596.8602464497089
+[56]2022-08-22 13:10:30,782: ***** Running evaluation *****
+[56]2022-08-22 13:12:20,536:   acc = 0.8824285714285715
+[56]2022-08-22 13:12:20,536:   f1 = 0.661177439275422
+[56]2022-08-22 13:12:20,536:   precision = 0.5970260223048327
+[56]2022-08-22 13:12:20,536:   recall = 0.7407749077490775
+[56]2022-08-22 13:20:43,297: [epoch 2] ,lr: 7.379663820201714e-05 ,tr_loss: 320.74806705117226
+[56]2022-08-22 13:20:48,234: ***** Running evaluation *****
+[56]2022-08-22 13:22:37,743:   acc = 0.9162857142857143
+[56]2022-08-22 13:22:37,743:   f1 = 0.7484978540772533
+[56]2022-08-22 13:22:37,743:   precision = 0.6998394863563403
+[56]2022-08-22 13:22:37,744:   recall = 0.8044280442804428
+[56]2022-08-22 13:30:58,987: [epoch 3] ,lr: 0.0 ,tr_loss: 143.8909567054361
+[56]2022-08-22 13:31:03,944: ***** Running evaluation *****
+[56]2022-08-22 13:32:53,443:   acc = 0.9388571428571428
+[56]2022-08-22 13:32:53,444:   f1 = 0.8034894398530762
+[56]2022-08-22 13:32:53,444:   precision = 0.79981718464351
+[56]2022-08-22 13:32:53,444:   recall = 0.8071955719557196
+[56]2022-08-22 13:32:56,950: ***** Running model on dev data *****
+[56]2022-08-22 13:33:42,005: -----Best Result-----
+[56]2022-08-22 13:33:42,006:   acc = 0.9388571428571428
+[56]2022-08-22 13:33:42,006:   f1 = 0.8034894398530762
+[56]2022-08-22 13:33:42,006:   precision = 0.79981718464351
+[56]2022-08-22 13:33:42,006:   recall = 0.8071955719557196
+[56]2022-08-22 13:33:46,940: ***** Running evaluation *****
+[56]2022-08-22 13:35:36,380:   acc = 0.9388571428571428
+[56]2022-08-22 13:35:36,381:   f1 = 0.8034894398530762
+[56]2022-08-22 13:35:36,381:   precision = 0.79981718464351
+[56]2022-08-22 13:35:36,381:   recall = 0.8071955719557196
+[56]2022-08-22 13:35:36,381: Saved to saves/roberta-base/3_20220822-1301
+[56]2022-08-30 09:49:55,154: ***** Running model on dev data *****
+[56]2022-08-30 09:50:00,410: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2022-08-30 10:20:34,094: ***** Running model on dev data *****
+[56]2022-08-30 10:20:38,171: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2022-08-30 10:25:15,773: ***** Running model on dev data *****
+[56]2022-08-30 10:25:20,338: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2022-08-30 10:26:37,080: ***** Running model on dev data *****
+[56]2022-08-30 10:26:41,351: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2022-08-30 10:32:37,720: ***** Running model on dev data *****
+[56]2022-08-30 10:32:41,922: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2022-08-30 14:14:04,047: ***** Running model on dev data *****
+[56]2022-08-30 14:14:07,299: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2022-08-30 16:19:24,337: ***** Running model on dev data *****
+[56]2022-08-30 16:19:27,699: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2022-08-30 18:19:59,277: ***** Running model on dev data *****
+[56]2022-08-30 18:25:41,872: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2023-02-27 11:17:39,947: ***** Running model on dev data *****
+[56]2023-02-27 11:17:45,807: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2023-02-28 11:41:45,619: ***** Running model on dev data *****
+[56]2023-02-28 11:41:49,766: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 10:18:32,949: ***** Running model on dev data *****
+[56]2023-04-05 10:18:38,394: Saved to /vol/tensusers4/jgrunwald/metaphorclam/metaphorclam/MetRobert_run2/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 13:48:14,689: ***** Running model on dev data *****
+[56]2023-04-05 13:59:51,113: ***** Running model on dev data *****
+[56]2023-04-05 13:59:58,618: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:09:20,487: ***** Running model on dev data *****
+[56]2023-04-05 17:09:27,801: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:10:43,047: ***** Running model on dev data *****
+[56]2023-04-05 17:10:50,523: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:14:01,432: ***** Running model on dev data *****
+[56]2023-04-05 17:14:09,336: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:15:29,273: ***** Running model on dev data *****
+[56]2023-04-05 17:15:37,032: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:18:14,743: ***** Running model on dev data *****
+[56]2023-04-05 17:18:22,262: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:19:47,542: ***** Running model on dev data *****
+[56]2023-04-05 17:19:55,204: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:23:56,879: ***** Running model on dev data *****
+[56]2023-04-05 17:24:04,481: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:37:12,941: ***** Running model on dev data *****
+[56]2023-04-05 17:37:21,111: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:37:50,386: ***** Running model on dev data *****
+[56]2023-04-05 17:37:58,197: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:39:44,200: ***** Running model on dev data *****
+[56]2023-04-05 17:39:51,854: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
+[56]2023-04-05 17:40:29,002: ***** Running model on dev data *****
+[56]2023-04-05 17:40:36,657: Saved to ./MetRobert_rel/saves/roberta-base/3_20220822-1301
