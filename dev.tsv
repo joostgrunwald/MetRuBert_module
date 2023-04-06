@@ -1,0 +1,105 @@
+index      label   sentence        POS     w_index
+COV_fragment01 1	0	Hij toverde een lach op haar gezicht.	PRON	0
+COV_fragment01 2	0	Hij toverde een lach op haar gezicht.	VERB	1
+COV_fragment01 3	0	Hij toverde een lach op haar gezicht.	DET	2
+COV_fragment01 4	0	Hij toverde een lach op haar gezicht.	NOUN	3
+COV_fragment01 5	0	Hij toverde een lach op haar gezicht.	DET	5
+COV_fragment01 6	0	Hij toverde een lach op haar gezicht.	NOUN	6
+COV_fragment01 7	0	Zij eet haar buik rond.	PRON	0
+COV_fragment01 8	0	Zij eet haar buik rond.	VERB	1
+COV_fragment01 9	0	Zij eet haar buik rond.	DET	2
+COV_fragment01 10	0	Zij eet haar buik rond.	NOUN	3
+COV_fragment01 11	0	Zij eet haar buik rond.	ADJ	4
+COV_fragment01 12	0	Laten we hierbij stilstaan.	VERB	0
+COV_fragment01 13	0	Laten we hierbij stilstaan.	PRON	1
+COV_fragment01 14	0	Laten we hierbij stilstaan.	ADV	2
+COV_fragment01 15	0	Laten we hierbij stilstaan.	VERB	3
+COV_fragment01 16	0	Je hoeft je niet groot te houden.	PRON	0
+COV_fragment01 17	0	Je hoeft je niet groot te houden.	VERB	1
+COV_fragment01 18	0	Je hoeft je niet groot te houden.	PRON	2
+COV_fragment01 19	0	Je hoeft je niet groot te houden.	ADV	3
+COV_fragment01 20	0	Je hoeft je niet groot te houden.	ADJ	4
+COV_fragment01 21	0	Je hoeft je niet groot te houden.	VERB	6
+COV_fragment01 22	0	Wat is jouw kamer een zwijnenstal !	PRON	0
+COV_fragment01 23	0	Wat is jouw kamer een zwijnenstal !	VERB	1
+COV_fragment01 24	0	Wat is jouw kamer een zwijnenstal !	DET	2
+COV_fragment01 25	0	Wat is jouw kamer een zwijnenstal !	NOUN	3
+COV_fragment01 26	0	Wat is jouw kamer een zwijnenstal !	DET	4
+COV_fragment01 27	0	Wat is jouw kamer een zwijnenstal !	NOUN	5
+COV_fragment01 28	0	Ik schrik me een hoedje.	PRON	0
+COV_fragment01 29	0	Ik schrik me een hoedje.	VERB	1
+COV_fragment01 30	0	Ik schrik me een hoedje.	PRON	2
+COV_fragment01 31	0	Ik schrik me een hoedje.	DET	3
+COV_fragment01 32	0	Ik schrik me een hoedje.	NOUN	4
+COV_fragment01 33	0	ik zie beren op de weg.	PRON	0
+COV_fragment01 34	0	ik zie beren op de weg.	VERB	1
+COV_fragment01 35	0	ik zie beren op de weg.	NOUN	2
+COV_fragment01 36	0	ik zie beren op de weg.	DET	4
+COV_fragment01 37	0	ik zie beren op de weg.	NOUN	5
+COV_fragment01 38	0	Bloeden als een rund.	VERB	0
+COV_fragment01 39	0	Bloeden als een rund.	DET	2
+COV_fragment01 40	0	Bloeden als een rund.	NOUN	3
+COV_fragment01 41	0	Wikken en wegen.	VERB	0
+COV_fragment01 42	0	Wikken en wegen.	VERB	2
+COV_fragment01 43	0	Met hand en tand verzetten.	NOUN	1
+COV_fragment01 44	0	Met hand en tand verzetten.	NOUN	3
+COV_fragment01 45	0	Het geld groeit me niet op de rug.	DET	0
+COV_fragment01 46	0	Het geld groeit me niet op de rug.	NOUN	1
+COV_fragment01 47	0	Het geld groeit me niet op de rug.	VERB	2
+COV_fragment01 48	0	Het geld groeit me niet op de rug.	PRON	3
+COV_fragment01 49	0	Het geld groeit me niet op de rug.	ADV	4
+COV_fragment01 50	0	Het geld groeit me niet op de rug.	DET	6
+COV_fragment01 51	0	Het geld groeit me niet op de rug.	NOUN	7
+COV_fragment01 52	0	In kaart brengen.	NOUN	1
+COV_fragment01 53	0	In kaart brengen.	VERB	2
+COV_fragment01 54	0	Op iemand rekenen.	PRON	1
+COV_fragment01 55	0	Op iemand rekenen.	VERB	2
+COV_fragment01 56	0	De kogel is door de kerk.	DET	0
+COV_fragment01 57	0	De kogel is door de kerk.	NOUN	1
+COV_fragment01 58	0	De kogel is door de kerk.	VERB	2
+COV_fragment01 59	0	De kogel is door de kerk.	DET	4
+COV_fragment01 60	0	De kogel is door de kerk.	NOUN	5
+COV_fragment01 61	0	Eieren voor je geld kiezen.	NOUN	0
+COV_fragment01 62	0	Eieren voor je geld kiezen.	DET	2
+COV_fragment01 63	0	Eieren voor je geld kiezen.	NOUN	3
+COV_fragment01 64	0	Eieren voor je geld kiezen.	VERB	4
+COV_fragment01 65	0	Steen en been klagen.	NOUN	0
+COV_fragment01 66	0	Steen en been klagen.	NOUN	2
+COV_fragment01 67	0	Steen en been klagen.	VERB	3
+COV_fragment01 68	0	Geld over de balk gooien.	NOUN	0
+COV_fragment01 69	0	Geld over de balk gooien.	DET	2
+COV_fragment01 70	0	Geld over de balk gooien.	NOUN	3
+COV_fragment01 71	0	Geld over de balk gooien.	VERB	4
+COV_fragment01 72	0	Het over een andere boeg gooien.	DET	2
+COV_fragment01 73	0	Het over een andere boeg gooien.	ADJ	3
+COV_fragment01 74	0	Het over een andere boeg gooien.	NOUN	4
+COV_fragment01 75	0	Het over een andere boeg gooien.	VERB	5
+COV_fragment01 76	0	Zonder blikken of blozen.	VERB	1
+COV_fragment01 77	0	Zonder blikken of blozen.	VERB	3
+COV_fragment01 78	0	Zo doof als een kwartel.	ADJ	1
+COV_fragment01 79	0	Zo doof als een kwartel.	ADV	0
+COV_fragment01 80	0	Zo doof als een kwartel.	DET	3
+COV_fragment01 81	0	Zo doof als een kwartel.	NOUN	4
+COV_fragment01 82	0	Bont en blauw.	NOUN	0
+COV_fragment01 83	0	Bont en blauw.	ADJ	2
+COV_fragment01 84	0	Met man en macht.	NOUN	1
+COV_fragment01 85	0	Met man en macht.	NOUN	3
+COV_fragment01 86	0	In zee gaan met iemand.	NOUN	1
+COV_fragment01 87	0	In zee gaan met iemand.	VERB	2
+COV_fragment01 88	0	In zee gaan met iemand.	PRON	4
+COV_fragment01 89	0	Een oogje in het zeil houden.	DET	0
+COV_fragment01 90	0	Een oogje in het zeil houden.	NOUN	1
+COV_fragment01 91	0	Een oogje in het zeil houden.	DET	3
+COV_fragment01 92	0	Een oogje in het zeil houden.	NOUN	4
+COV_fragment01 93	0	Een oogje in het zeil houden.	VERB	5
+COV_fragment01 94	0	Geld moet rollen.	NOUN	0
+COV_fragment01 95	0	Geld moet rollen.	VERB	1
+COV_fragment01 96	0	Geld moet rollen.	VERB	2
+COV_fragment01 97	0	Kant noch wal raken.	NOUN	0
+COV_fragment01 98	0	Kant noch wal raken.	NOUN	2
+COV_fragment01 99	0	Kant noch wal raken.	VERB	3
+COV_fragment01 100	0	Het neusje van de zalm zijn.	DET	0
+COV_fragment01 101	0	Het neusje van de zalm zijn.	NOUN	1
+COV_fragment01 102	0	Het neusje van de zalm zijn.	DET	3
+COV_fragment01 103	0	Het neusje van de zalm zijn.	NOUN	4
+COV_fragment01 104	0	Het neusje van de zalm zijn.	VERB	5
