@@ -273,7 +273,7 @@ outputdir = os.path.realpath(
 
 if mode == "dev":
     dev_path = input("Please enter the path of the dev.tsv file")
-elif mode == "tok":
+elif mode == "txt":
     tok_folder = input(
         "Please enter the path of the folder containing the txt files")
     # get files in folder, filter on .tok files, retry if not present
@@ -291,6 +291,7 @@ elif mode == "tok":
     # iterate over files
     for i in range(len(tok_files)):
 
+        print("Tokenizing file " + tok_files[i] + " ...")
         # ? 
         # ? RUNNING UCTO
         # ? 
@@ -312,6 +313,7 @@ elif mode == "tok":
         findReplace(outputdir, "*.txt")
         findReplace(outputdir, "*.tok")
 
+        print("Parsing file with alpino: " + tok_files[i] + " ...")
         # ? 
         # ? RUNNING ALPINO
         # ?
@@ -344,7 +346,40 @@ elif mode == "tok":
         os.rename('xml', 'xml_' + basename)
         os.chdir(pwd)
 
-        #TODO: create dev.tsv
+    print("Generating dev.tsv file")
+    #? 
+    #? Generating dev.tsv
+    #?    
+
+    # get location needed
+    dev_location = outputdir
+
+    import pasmaparser_cov_melBert_allpos_clam as parser
+
+    # run the python file to generate dev data
+    parser.main(dev_location)
+
+    # go to directory where dev.tsv data was created
+    os.chdir(dev_location)
+
+    #?
+    #? Cleaning up intermediate files
+    #?
+
+    # cleanup folders unneeded xml files
+    for dire in os.listdir(dev_location):
+        d = os.path.join(dev_location, dire)
+        if os.path.isdir(d):
+            print("cleaning folder" + str(d))
+            for file in os.listdir(d):
+                if file.endswith(".xml") and str(alp) == "no":
+                    try:
+                        os.remove(d + "/" + file)
+                    except:
+                        print("Error while deleting xml file : ", file)
+
+    # get location of dev file to copy
+    dev_path = dev_location + "/" + "dev.tsv"
 
 # TODO: use output folder (replace first none with outputdir)
 outputgen.main(None, pos_list, False, dev_path, softmax)
