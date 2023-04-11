@@ -1,7 +1,10 @@
+import glob
+import sys
 from MetRobert_rel import main_dutch
 # import our own output prettifier
 import MetRubert_parser as outputgen
 import os
+import re
 
 # import used for docx generation
 from docx.shared import Inches
@@ -22,11 +25,55 @@ num = "no"
 # wheter to include softmax data or not
 softmax = "yes"
 
-print("What mode would you like to use? Type tok for tokenised input, txt for simple text input and dev for dev.tsv input.")
+print("What mode would you like to use? Type txt for simple text input and dev for dev.tsv input.")
 mode = input("Please enter your choice: ")
 while mode != "tok" and mode != "txt" and mode != "dev":
     mode = input("Invalid choice, try again: ")
 
+
+def findReplace(directory, filePattern):
+        for path, dirs, files in os.walk(os.path.abspath(directory)):
+            for filename in fnmatch.filter(files, filePattern):
+                filepath = os.path.join(path, filename)
+                s = pathlib.Path(filepath).read_text()
+
+                if s[:2] == "' ":
+                    s = s.replace("' ", "'", 1)
+
+                # extra checks added
+                s = s.replace("''", "")
+                s = s.replace(" ,,", " ")
+                s = s.replace(",,", " ")
+                s = s.replace("\"", "")
+                s = s.replace(" , ", ", ")
+                s = s.replace(" \\ ", "\\")
+                s = s.replace(" / ", "/")
+                s = s.replace(" :", ":")
+                s = s.replace(",, ", "")
+
+                # second round of extra checks
+                s = s.replace(", ,", "")
+                s = s.replace(" ?", "?")
+                s = s.replace(" - ", "- ")
+
+                # third round of extra checks
+                s = s.replace(" ( ", " (")
+                s = s.replace(" ) ", ") ")
+                s = s.replace(" . ", ". ")
+
+                s = s.replace(" ',", "',")
+                s = s.replace(" '',", "'',")
+
+                s = s.replace(" ' ", " '", 1)
+                s = s.replace(" ' ", "' ", 1)
+                s = s.replace(" ' ", " '", 1)
+                s = s.replace(" ' ", "' ", 1)
+                s = s.replace(" ' ", " '", 1)
+                s = s.replace(" ' ", "' ", 1)
+                s = s.replace(" ' ", " '", 1)
+                s = s.replace(" ' ", "' ", 1)
+                with open(filepath, "w") as f:
+                    f.write(s)
 
 def wordfunction(outputdir):
 
@@ -149,6 +196,60 @@ def wordfunction(outputdir):
     document.add_page_break()
     document.save(outputdir + '/' + 'MetRubert_runx.docx')
 
+    def findReplace(directory, filePattern):
+        for path, dirs, files in os.walk(os.path.abspath(directory)):
+            for filename in fnmatch.filter(files, filePattern):
+                filepath = os.path.join(path, filename)
+                s = pathlib.Path(filepath).read_text()
+
+                if s[:2] == "' ":
+                    s = s.replace("' ", "'", 1)
+
+                # extra checks added
+                s = s.replace("''", "")
+                s = s.replace(" ,,", " ")
+                s = s.replace(",,", " ")
+                s = s.replace("\"", "")
+                s = s.replace(" , ", ", ")
+                s = s.replace(" \\ ", "\\")
+                s = s.replace(" / ", "/")
+                s = s.replace(" :", ":")
+                s = s.replace(",, ", "")
+
+                # second round of extra checks
+                s = s.replace(", ,", "")
+                s = s.replace(" ?", "?")
+                s = s.replace(" - ", "- ")
+
+                # third round of extra checks
+                s = s.replace(" ( ", " (")
+                s = s.replace(" ) ", ") ")
+                s = s.replace(" . ", ". ")
+
+                s = s.replace(" ',", "',")
+                s = s.replace(" '',", "'',")
+
+                s = s.replace(" ' ", " '", 1)
+                s = s.replace(" ' ", "' ", 1)
+                s = s.replace(" ' ", " '", 1)
+                s = s.replace(" ' ", "' ", 1)
+                s = s.replace(" ' ", " '", 1)
+                s = s.replace(" ' ", "' ", 1)
+                s = s.replace(" ' ", " '", 1)
+                s = s.replace(" ' ", "' ", 1)
+                with open(filepath, "w") as f:
+                    f.write(s)
+
+def shellsafe(s, quote="'"):
+    """Return a shell-safe version of the input string."""
+    # Escape any occurrences of the quote character
+    s = s.replace(quote, "\\" + quote)
+
+    # Quote the string if it contains whitespace or shell metacharacters
+    if re.search(r'[\s\'"$`\\]', s):
+        s = quote + s + quote
+
+    return s
 
 # use parameter values to create a parameter list
 pos_list = []
@@ -167,18 +268,87 @@ if str(det) == "no":
 if str(num) == "no":
     pos_list.append("num")
 
+outputdir = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
 if mode == "dev":
     dev_path = input("Please enter the path of the dev.tsv file")
 elif mode == "tok":
     tok_folder = input(
-        "Please enter the path of the folder containing the tok files")
-    # TODO: implement tok file usage and retrieval
+        "Please enter the path of the folder containing the txt files")
+    # get files in folder, filter on .tok files, retry if not present
+    tok_files = [f for f in os.listdir(tok_folder) if os.path.isfile(
+        os.path.join(tok_folder, f)) and f.endswith(".txt")]
+    if len(tok_files) == 0:
+        print("No txt files found in this folder")
+        exit()
 
+    # print the files in the folder and ask the user to select one (DEBUG)
+    print("Found the following txt files in the folder:")
+    for i in range(len(tok_files)):
+        print(str(i) + " : " + tok_files[i])
+
+    # iterate over files
+    for i in range(len(tok_files)):
+
+        # ? 
+        # ? RUNNING UCTO
+        # ? 
+
+        # get the path of the file
+        tok_path = os.path.join(tok_folder, tok_files[i])
+        inputfilepath = str(tok_path)
+        basename = os.path.basename(inputfilepath)[:-4] # remove .txt
+
+        # output tok path
+        tokfile = os.path.join(outputdir, basename + '.tok')
+        r = os.system('ucto -L nl -n ' + shellsafe(inputfilepath,
+                        '"') + ' > ' + shellsafe(tokfile, '"'))
+        if r != 0:
+            print("Failure running ucto", file=sys.stderr)
+            sys.exit(2)
+
+        # Replace all quotation marks in files
+        findReplace(outputdir, "*.txt")
+        findReplace(outputdir, "*.tok")
+
+        # ? 
+        # ? RUNNING ALPINO
+        # ?
+
+        pwd = os.getcwd()
+        os.chdir(outputdir)
+        if not os.path.exists("xml"):
+            os.mkdir("xml")
+        else:
+            for filename in glob.glob('xml/*.xml'):
+                os.unlink(filename)  # clear for next round
+
+        ALPINO_HOME = os.getenv('ALPINO_HOME')
+
+        if ALPINO_HOME is None:
+            print("ALPINO_HOME not set", file=sys.stderr)
+            sys.exit(1)
+
+        cmd = "ALPINO_HOME=" + shellsafe(ALPINO_HOME) + " " + ALPINO_HOME + \
+            "/bin/Alpino -veryfast -flag treebank xml debug=1 end_hook=xml user_max=900000 -parse < " + tokfile
+        print(cmd, file=sys.stderr)
+        r = os.system(cmd)
+        if r != 0:
+            print("Failure running alpino", file=sys.stderr)
+            sys.exit(2)
+
+        os.chdir("xml")
+
+        os.chdir('..')
+        os.rename('xml', 'xml_' + basename)
+        os.chdir(pwd)
+
+        #TODO: create dev.tsv
 
 # TODO: use output folder (replace first none with outputdir)
 outputgen.main(None, pos_list, False, dev_path, softmax)
-outputdir = os.path.realpath(
-    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
 if True:
     # cleanup
     for file in os.listdir(outputdir):
