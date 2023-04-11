@@ -9,7 +9,12 @@ This contains only the python MetRuBert module to use externally
 .5 you can now run the model by doing python3 MetRuBert.py <br>
 
 # The input
-MetRuBert.py will ask you for the location of a dev.tsv file, these are the input files our model uses, an example was added in this repo as well.
+MetRuBert.py will ask you for input, it currently accepts two types of input:
+- dev.tsv file (output of our parsers or manually generated)
+- txt files, which will be parsed into a dev.tsv file.
+
+# Parsing
+If you want to use the model with txt files as input, then you are required to have ucto and alpino installed and ALPINO_HOME exported as shown in the alpino manual. The model uses ucto to tokenize the txt files and alpino to parse the tokenized files. 
 
 # Virtual env
 it might be usefull to create a virtual environment <br>
